@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>minions</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <style>
+        body{
+            margin:0;padding:0;
+        }
+        .minions{
+            padding:20px 0 180px;
+            position: relative;
+        }
+        .minions-cloth{
+            background-color: #fff;
+            background-image: linear-gradient(45deg, rgba(55, 142, 201, 0.51), rgba(55, 142, 201, 0.53) 10%, #307db0 30% , #307db0) ;
+            background-size:4px;
+        }
+        .minions-hd{
+            border-radius: 160px 160px 0 0;
+            padding:106px 0 90px;
+            background: #ede11c;
+            position: relative;
+            overflow: hidden;
+            z-index:1;
+
+        }
+        .minions-hd:after{
+            display: block;
+            content:"\0020";
+            height:10px;
+            width:100%;
+            position: absolute;
+            background: #532a30;
+            top: 151px;
+            z-index:-1;
+        }
+        .minions-eye{
+            margin: auto;
+            background: rgb(255, 255, 255);
+            position: relative;
+            height:100px;width:100px;
+            border-radius:50%;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow:0 0 0 8px rgba(255, 255, 255, 0.4), 0 0 0 16px rgba(208, 189, 183, 0.4);
+        }
+        .minions-eye:after,
+        .minions-eye:before{
+            display: block;
+            content:'\0020';
+            position: absolute;
+            left:50%;top:50%;
+            border-radius:50%;
+        }
+        .minions-eye:after{
+            width:50px;height:50px;
+            margin:-25px;
+            z-index:-2;
+            background:radial-gradient(#000 30%,#000, #631c15 40%);
+        }
+        .minions-eye:before{
+            width: 20px;height:10px;
+            margin:-23px;
+            z-index:-1;
+            background: rgba(255, 255, 255, 0.93);
+            -webkit-transform: rotate(-30deg);
+            transform: rotate(-25deg);
+        }
+        .minions-mouth{
+            position: absolute;
+            bottom:25px;left: 50%;
+            width:120px;
+            height:25px;
+            background: #432111;
+            border-radius:0 0 50% 50%;
+            margin-left:-60px ;
+            overflow: hidden;
+        }
+        .minions-mouth:after{
+            content:"\0020";
+            display: block;
+            height:20px;
+            width:24px;
+            border-radius: 0 0 6px 6px;
+            position: absolute;
+            top:-8px;left:-4px;
+            background:#fff;
+            -webkit-box-shadow: 25px 2px 0 0 #fff,
+            49px 4px 0 0 #fff,
+            74px 4px 0 0 #fff,
+            98px 0 0 0 #fff,
+            122px 0 0 0 #fff;
+            box-shadow:25px 3px 0 0 #fff,
+            49px 3px 0 0 #fff,
+            74px 2px 0 0 #fff,
+            98px 0 0 0 #fff,
+            122px 0 0 0 #fff
+        ;
+        }
+        .minions-bd{
+            overflow: hidden;
+            position: relative;
+            height:400px;
+            padding:20px 30px;
+            border-radius:0 0 80px 80px;
+        }
+
+        .minions-bd:after,
+        .minions-bd:before{
+            display: block;
+            content:'\0020';
+            background: #ede11c;
+            height:180px;
+            width:60px;
+            position: absolute;
+            top:30px;
+            border-radius:16px 16px 20px 20px;
+            left:-30px;
+        }
+        .minions-bd:after{
+            left:auto;
+            right:-30px;
+        }
+        .minions-leg__lt,
+        .minions-leg__rt{
+            height:100px;
+            width:60px;
+            position: absolute;
+            left:66.666666%;
+            margin-left:-30px;
+        }
+        .minions-leg__lt:after,
+        .minions-leg__rt:after{
+            display: block;
+            content:'\0020';
+            background: #0b0b09;
+            position: absolute;
+            bottom:0;
+            height:50px;
+            width:130px;
+            border-radius:0 50px 0 0
+        }
+        .minions-leg__lt{
+            left:33.333333%;
+
+        }
+        .minions-leg__lt:after{
+            left:-70px;
+            border-radius:50px 0 0 0;
+        }
+
+    </style>
+</head>
+<body>
+<div class="minions">
+    <div class="minions-hd">
+        <div class="minions-eye"></div>
+        <div class="minions-mouth">
+        </div>
+    </div>
+    <div class="minions-bd minions-cloth">
+    </div>
+    <div class="minions-leg__lt minions-cloth"></div>
+    <div class="minions-leg__rt minions-cloth"></div>
+</div>
+
+</body>
+</html>
